@@ -28,7 +28,34 @@ public class AgendaApp {
 		
 	} // main
 	
+	
+	
 				/* MEEEEEEEEETODOS */ 
+
+	private static int apresentarMenuPrincipal() {
+		// TODO Auto-generated method stub
+		boolean inteiro = false;
+		int opcao = 0;
+		while(!inteiro){
+			out.println("\n AGENDA TELEFONICA");
+			out.println("(1) Inserir");
+			out.println("(2) Buscar");
+			out.println("(3) Sair");
+			out.print("Escolha um opção");
+			
+			String s = entrada.nextLine();
+			
+			try{
+				opcao = Integer.parseInt(s);
+				inteiro  = true;
+			}catch(Exception e){
+				out.println("ERRO: opção deve ser um valor inteiro");
+			} // catch
+			
+		}  //while
+		
+		return opcao;
+	}//apresentarMenuPrincipal
 	
 	private static void buscarContato() {
 		// TODO Auto-generated method stub
@@ -100,32 +127,5 @@ public class AgendaApp {
 		
 	} // lerNome
 		
-		
-	
-
-	private static int apresentarMenuPrincipal() {
-		// TODO Auto-generated method stub
-		boolean inteiro = false;
-		int opcao = 0;
-		while(!inteiro){
-			out.println("\n AGENDA TELEFONICA");
-			out.println("(1) Inserir");
-			out.println("(2) Buscar");
-			out.println("(3) Sair");
-			out.print("Escolha um opção");
-			
-			String s = entrada.nextLine();
-			
-			try{
-				opcao = Integer.parseInt(s);
-				inteiro  = true;
-			}catch(Exception e){
-				out.println("ERRO: opção deve ser um valor inteiro");
-			} // catch
-			
-		}  //while
-		
-		return 0;
-	}
 	
 } // class
